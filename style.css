@@ -1,4 +1,3 @@
-/* Reset i podstawowe style */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +8,69 @@
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
     color: white;
     text-align: center;
     padding: 20px;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    animation: move 20s linear infinite;
+}
+
+.circle:nth-child(1) {
+    width: 150px; height: 150px;
+    top: 10%; left: 15%;
+    animation-duration: 25s;
+}
+
+.circle:nth-child(2) {
+    width: 100px; height: 100px;
+    top: 70%; left: 20%;
+    animation-duration: 30s;
+}
+
+.circle:nth-child(3) {
+    width: 200px; height: 200px;
+    top: 40%; left: 80%;
+    animation-duration: 35s;
+}
+
+.circle:nth-child(4) {
+    width: 120px; height: 120px;
+    top: 80%; left: 70%;
+    animation-duration: 28s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+    50% {
+        transform: translateY(-50px) translateX(50px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+}
+
+.container {
+    z-index: 1;
+    max-width: 900px;
 }
 
 .container h1 {
@@ -31,7 +86,17 @@ body {
     opacity: 0;
 }
 
-/* Ikony */
+.about-section {
+    margin-top: 30px;
+    font-size: 1.2em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
 .icon-section {
     display: flex;
     justify-content: center;
@@ -66,7 +131,6 @@ body {
     transform: scale(1.2) rotate(10deg);
 }
 
-/* Animacje wejścia */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -84,7 +148,6 @@ body {
     }
 }
 
-/* Klasy animacji z opóźnieniem */
 .fade-in-delay {
     opacity: 0;
     animation: fadeIn 2s ease forwards;
@@ -97,12 +160,17 @@ body {
     animation-delay: 2s;
 }
 
+.fade-in-delay-3 {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 3s;
+}
+
 .slide-in {
     opacity: 0;
     animation: slide-in 1s ease-out forwards;
 }
 
-/* Responsywność */
 @media (max-width: 600px) {
     .container h1 {
         font-size: 2em;
@@ -110,6 +178,11 @@ body {
 
     .container p {
         font-size: 1.2em;
+    }
+
+    .about-section {
+        font-size: 1em;
+        padding: 0 10px;
     }
 
     .icon-card {
