@@ -1,4 +1,4 @@
-/* Resetowanie marginesów i paddingu */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +7,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #f0f0f0, #e0e0e0);
-    color: #333;
+    background: linear-gradient(-45deg, #a8e063, #56ab2f);
+    background-size: 400% 400%;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    animation: backgroundMove 15s infinite alternate;
+    animation: gradientMove 15s ease infinite;
 }
 
 .container {
@@ -26,26 +27,25 @@ body {
 h1 {
     font-size: 48px;
     margin: 20px 0;
-}
-
-h1 span {
-    color: #FF4C60;
+    color: #ffffff;
 }
 
 h2 {
     font-size: 24px;
-    color: #555;
+    color: #eaffea;
 }
 
 h3 {
     font-size: 22px;
     margin: 15px 0;
+    color: #d4ffd4;
 }
 
 p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
+    color: #f0fff0;
 }
 
 .contact p {
@@ -54,7 +54,7 @@ p {
     font-weight: bold;
 }
 
-/* Animacje wjazdu tekstu */
+/* Animacje fade-in */
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s forwards;
@@ -90,23 +90,57 @@ p {
     animation-delay: 5s;
 }
 
+.fade-in-delay6 {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 6s;
+}
+
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Delikatna animacja tła */
-@keyframes backgroundMove {
-    from {
+/* Animacja tła */
+@keyframes gradientMove {
+    0% {
         background-position: 0% 50%;
     }
-    to {
+    50% {
         background-position: 100% 50%;
     }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ikony */
+.icons {
+    margin: 30px 0;
+}
+
+.icon {
+    font-size: 50px;
+    margin: 0 15px;
+    animation: float 3s ease-in-out infinite;
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #c0ffc0;
+}
+
+/* Animacja unoszenia ikon */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
