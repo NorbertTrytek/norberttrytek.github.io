@@ -7,15 +7,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(-45deg, #a8e063, #56ab2f);
-    background-size: 400% 400%;
-    color: #fff;
+    background: #ffffff; /* Białe tło */
+    color: #ff0000; /* Czerwone napisy */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    animation: gradientMove 15s ease infinite;
 }
 
 .container {
@@ -27,31 +25,32 @@ body {
 h1 {
     font-size: 48px;
     margin: 20px 0;
-    color: #ffffff;
+    color: #ff0000; /* Czerwony */
 }
 
 h2 {
     font-size: 24px;
-    color: #eaffea;
+    color: #ff0000; /* Czerwony */
 }
 
 h3 {
     font-size: 22px;
     margin: 15px 0;
-    color: #d4ffd4;
+    color: #ff0000; /* Czerwony */
 }
 
 p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
-    color: #f0fff0;
+    color: #ff0000; /* Czerwony */
 }
 
 .contact p {
     font-size: 20px;
     margin-top: 30px;
     font-weight: bold;
+    color: #ff0000; /* Czerwony */
 }
 
 /* Animacje fade-in */
@@ -107,19 +106,6 @@ p {
     }
 }
 
-/* Animacja gradientu tła */
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /* Ikony */
 .icons {
     margin: 30px 0;
@@ -129,13 +115,13 @@ p {
     font-size: 50px;
     margin: 0 15px;
     animation: float 3s ease-in-out infinite;
-    color: #ffffff;
+    color: #ff0000; /* Czerwone ikony */
     transition: transform 0.3s, color 0.3s;
 }
 
 .icon:hover {
     transform: scale(1.2);
-    color: #c0ffc0;
+    color: #cc0000; /* Ciemniejsza czerwień po najechaniu */
 }
 
 /* Animacja unoszenia ikon */
