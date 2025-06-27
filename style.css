@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     overflow: hidden;
     color: white;
     text-align: center;
@@ -28,59 +28,61 @@ body {
 .circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.07);
     animation: move 20s linear infinite;
 }
 
 .circle:nth-child(1) {
-    width: 150px; height: 150px;
+    width: 200px; height: 200px;
     top: 10%; left: 15%;
     animation-duration: 25s;
 }
 
 .circle:nth-child(2) {
-    width: 100px; height: 100px;
+    width: 120px; height: 120px;
     top: 70%; left: 20%;
     animation-duration: 30s;
 }
 
 .circle:nth-child(3) {
-    width: 200px; height: 200px;
+    width: 250px; height: 250px;
     top: 40%; left: 80%;
     animation-duration: 35s;
 }
 
 .circle:nth-child(4) {
-    width: 120px; height: 120px;
+    width: 150px; height: 150px;
     top: 80%; left: 70%;
     animation-duration: 28s;
 }
 
 @keyframes move {
-    0% {
-        transform: translateY(0) translateX(0) scale(1);
-    }
-    50% {
-        transform: translateY(-50px) translateX(50px) scale(1.2);
-    }
-    100% {
-        transform: translateY(0) translateX(0) scale(1);
-    }
+    0% { transform: translateY(0) translateX(0) scale(1); }
+    50% { transform: translateY(-50px) translateX(50px) scale(1.2); }
+    100% { transform: translateY(0) translateX(0) scale(1); }
 }
 
 .container {
     z-index: 1;
-    max-width: 900px;
+    max-width: 1000px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
 .container h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
     animation: slide-in 1s ease-out forwards;
 }
 
 .container p {
     font-size: 1.5em;
-    margin-top: 20px;
+    font-weight: 400;
+    margin-top: 10px;
     animation: fadeIn 2s ease forwards;
     animation-delay: 0.5s;
     opacity: 0;
@@ -89,10 +91,10 @@ body {
 .about-section {
     margin-top: 30px;
     font-size: 1.2em;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.8;
     animation: fadeIn 2s ease forwards;
     opacity: 0;
 }
@@ -106,91 +108,17 @@ body {
 }
 
 .icon-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    width: 200px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 220px;
     transition: transform 0.3s, background 0.3s;
     cursor: pointer;
     animation: fadeIn 2s ease forwards;
     opacity: 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .icon-card i {
-    font-size: 3em;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
-}
-
-.icon-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.icon-card:hover i {
-    transform: scale(1.2) rotate(10deg);
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.fade-in-delay {
-    opacity: 0;
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 1s;
-}
-
-.fade-in-delay-2 {
-    opacity: 0;
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 2s;
-}
-
-.fade-in-delay-3 {
-    opacity: 0;
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 3s;
-}
-
-.slide-in {
-    opacity: 0;
-    animation: slide-in 1s ease-out forwards;
-}
-
-@media (max-width: 600px) {
-    .container h1 {
-        font-size: 2em;
-    }
-
-    .container p {
-        font-size: 1.2em;
-    }
-
-    .about-section {
-        font-size: 1em;
-        padding: 0 10px;
-    }
-
-    .icon-card {
-        width: 150px;
-        padding: 15px;
-    }
-
-    .icon-card i {
-        font-size: 2.5em;
-    }
-}
+    font
