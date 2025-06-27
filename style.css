@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset stylów */
 * {
     margin: 0;
     padding: 0;
@@ -107,7 +107,7 @@ p {
     }
 }
 
-/* Animacja tła */
+/* Animacja gradientu tła */
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
@@ -130,7 +130,7 @@ p {
     margin: 0 15px;
     animation: float 3s ease-in-out infinite;
     color: #ffffff;
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .icon:hover {
