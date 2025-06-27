@@ -1,0 +1,123 @@
+/* Reset i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container h1 {
+    font-size: 3em;
+    animation: slide-in 1s ease-out forwards;
+}
+
+.container p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Ikony */
+.icon-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.icon-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+.icon-card i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.icon-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.icon-card:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Animacje wejścia */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Klasy animacji z opóźnieniem */
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1s;
+}
+
+.fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.slide-in {
+    opacity: 0;
+    animation: slide-in 1s ease-out forwards;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .container p {
+        font-size: 1.2em;
+    }
+
+    .icon-card {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .icon-card i {
+        font-size: 2.5em;
+    }
+}
