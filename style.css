@@ -1,132 +1,127 @@
-/* Reset stylów */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: #ffffff; /* Białe tło */
-    color: #ff0000; /* Czerwone napisy */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norbert Trytek - Junior IT Administrator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="avatar-container">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="status-indicator"></div>
+            </div>
+            <h1 class="name">Norbert Trytek</h1>
+            <h2 class="title">Junior IT Administrator</h2>
+            <p class="description">Zajmuję się administracją systemów IT, konfiguracją sieci oraz wsparciem użytkowników.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </header>
 
-.container {
-    text-align: center;
-    max-width: 800px;
-    padding: 20px;
-}
+        <main class="content">
+            <section class="about-section">
+                <h3><i class="fas fa-user-circle"></i> O mnie</h3>
+                <p>Interesuję się technologiami serwerowymi, sieciami oraz bezpieczeństwem IT. Nieustannie rozwijam swoje umiejętności w zakresie administracji systemów i najnowszych rozwiązań technologicznych.</p>
+                
+                <div class="skills">
+                    <h4><i class="fas fa-code"></i> Umiejętności</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Sieci TCP/IP</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">Virtualization</span>
+                        <span class="skill-tag">Security</span>
+                    </div>
+                </div>
 
-h1 {
-    font-size: 48px;
-    margin: 20px 0;
-    color: #ff0000; /* Czerwony */
-}
+                <div class="experience">
+                    <h4><i class="fas fa-briefcase"></i> Doświadczenie</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h5>Junior IT Administrator</h5>
+                                <span class="timeline-date">2023 - obecnie</span>
+                                <p>Administracja serwerów, wsparcie techniczne użytkowników</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h5>IT Support Specialist</h5>
+                                <span class="timeline-date">2022 - 2023</span>
+                                <p>Helpdesk, instalacja oprogramowania, diagnostyka sprzętu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-h2 {
-    font-size: 24px;
-    color: #ff0000; /* Czerwony */
-}
+            <section class="contact-section">
+                <h3><i class="fas fa-envelope"></i> Kontakt</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>norbert.trytek@example.com</span>
+                        <button class="copy-btn" onclick="copyToClipboard('norbert.trytek@example.com')">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+48 123 456 789</span>
+                        <button class="copy-btn" onclick="copyToClipboard('+48 123 456 789')">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kraków, Polska</span>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h4>Wyślij wiadomość</h4>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Twoje imię" required>
+                        <input type="email" placeholder="Twój email" required>
+                        <textarea placeholder="Wiadomość" rows="4" required></textarea>
+                        <button type="submit">Wyślij <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </section>
+        </main>
 
-h3 {
-    font-size: 22px;
-    margin: 15px 0;
-    color: #ff0000; /* Czerwony */
-}
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Norbert Trytek. Wszystkie prawa zastrzeżone.</p>
+                <div class="theme-toggle">
+                    <button id="themeToggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #ff0000; /* Czerwony */
-}
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
 
-.contact p {
-    font-size: 20px;
-    margin-top: 30px;
-    font-weight: bold;
-    color: #ff0000; /* Czerwony */
-}
-
-/* Animacje fade-in */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-.fade-in-delay {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 1s;
-}
-
-.fade-in-delay2 {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 2s;
-}
-
-.fade-in-delay3 {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 3s;
-}
-
-.fade-in-delay4 {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 4s;
-}
-
-.fade-in-delay5 {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 5s;
-}
-
-.fade-in-delay6 {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 6s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Ikony */
-.icons {
-    margin: 30px 0;
-}
-
-.icon {
-    font-size: 50px;
-    margin: 0 15px;
-    animation: float 3s ease-in-out infinite;
-    color: #ff0000; /* Czerwone ikony */
-    transition: transform 0.3s, color 0.3s;
-}
-
-.icon:hover {
-    transform: scale(1.2);
-    color: #cc0000; /* Ciemniejsza czerwień po najechaniu */
-}
-
-/* Animacja unoszenia ikon */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
+    <script src="script.js"></script>
+</body>
+</html>
