@@ -7,120 +7,290 @@
     <title>Norbert Trytek - Junior IT Administrator</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
-            <div class="avatar-container">
-                <div class="avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="status-indicator"></div>
+    <div class="matrix-bg" id="matrix"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="terminal-prompt">norbert@admin:~$</span>
             </div>
-            <h1 class="name">Norbert Trytek</h1>
-            <h2 class="title">Junior IT Administrator</h2>
-            <p class="description">Zajmuję się administracją systemów IT, konfiguracją sieci oraz wsparciem użytkowników.</p>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            </div>
-        </header>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">O mnie</a></li>
+                <li><a href="#skills" class="nav-link">Umiejętności</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <main class="content">
-            <section class="about-section">
-                <h3><i class="fas fa-user-circle"></i> O mnie</h3>
-                <p>Interesuję się technologiami serwerowymi, sieciami oraz bezpieczeństwem IT. Nieustannie rozwijam swoje umiejętności w zakresie administracji systemów i najnowszych rozwiązań technologicznych.</p>
-                
-                <div class="skills">
-                    <h4><i class="fas fa-code"></i> Umiejętności</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Windows Server</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Sieci TCP/IP</span>
-                        <span class="skill-tag">Active Directory</span>
-                        <span class="skill-tag">Virtualization</span>
-                        <span class="skill-tag">Security</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="Norbert Trytek">Norbert Trytek</h1>
+            </div>
+            <div class="typing-container">
+                <p class="typing-text">Junior IT Administrator</p>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Pasjonujący się technologią administrator IT z umiejętnościami w zarządzaniu infrastrukturą, 
+                rozwiązywaniu problemów technicznych i optymalizacji systemów. Zawsze gotowy na nowe wyzwania 
+                w dynamicznie rozwijającym się świecie IT.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Skontaktuj się
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <i class="fas fa-user"></i> Dowiedz się więcej
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">admin@norbert-pc</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">norbert@admin:~$</span>
+                        <span class="command">whoami</span>
+                    </div>
+                    <div class="terminal-line">Junior IT Administrator</div>
+                    <div class="terminal-line">
+                        <span class="prompt">norbert@admin:~$</span>
+                        <span class="command">cat skills.txt</span>
+                    </div>
+                    <div class="terminal-line">Windows Server, Linux, Network Administration</div>
+                    <div class="terminal-line">Hardware Troubleshooting, System Monitoring</div>
+                    <div class="terminal-line">
+                        <span class="prompt">norbert@admin:~$</span>
+                        <span class="cursor-blink">_</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="experience">
-                    <h4><i class="fas fa-briefcase"></i> Doświadczenie</h4>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h5>Junior IT Administrator</h5>
-                                <span class="timeline-date">2023 - obecnie</span>
-                                <p>Administracja serwerów, wsparcie techniczne użytkowników</p>
-                            </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="code-bracket">&lt;</span>
+                    O mnie
+                    <span class="code-bracket">/&gt;</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="file-name">about_me.json</span>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h5>IT Support Specialist</h5>
-                                <span class="timeline-date">2022 - 2023</span>
-                                <p>Helpdesk, instalacja oprogramowania, diagnostyka sprzętu</p>
-                            </div>
+                        <pre class="code-content">
+{
+  "name": "Norbert Trytek",
+  "role": "Junior IT Administrator",
+  "experience": "Świeży w branży IT",
+  "education": [
+    "Studia informatyczne",
+    "Praktyki w IT",
+    "Ciągłe samokształcenie"
+  ],
+  "passion": [
+    "Administracja systemami",
+    "Rozwiązywanie problemów",
+    "Nowe technologie",
+    "Automatyzacja procesów"
+  ],
+  "current_focus": "Rozwijanie umiejętności w administracji IT",
+  "motto": "Każdy problem to nowa możliwość nauki"
+}
+                        </pre>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Godzin praktyki</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Rozwiązanych problemów</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Ukończonych kursów</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="code-bracket">&lt;</span>
+                    Umiejętności
+                    <span class="code-bracket">/&gt;</span>
+                </h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Systemy Operacyjne</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows Server</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Windows 10/11</span>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="skill-category">
+                    <h3>Sieć & Bezpieczeństwo</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Administracja sieciowa</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Podstawy cyberbezpieczeństwa</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Konfiguracja routerów</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Narzędzia & Technologie</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Podstawy baz danych</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>PowerShell/Bash</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Podstawy chmury</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <section class="contact-section">
-                <h3><i class="fas fa-envelope"></i> Kontakt</h3>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="code-bracket">&lt;</span>
+                    Kontakt
+                    <span class="code-bracket">/&gt;</span>
+                </h2>
+            </div>
+            <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>norbert.trytek@example.com</span>
-                        <button class="copy-btn" onclick="copyToClipboard('norbert.trytek@example.com')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:notr@mail.com">notr@mail.com</a>
+                        </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+48 123 456 789</span>
-                        <button class="copy-btn" onclick="copyToClipboard('+48 123 456 789')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <span>Wkrótce dostępne</span>
+                        </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Kraków, Polska</span>
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <span>Wkrótce dostępne</span>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <h4>Wyślij wiadomość</h4>
-                    <form id="contactForm">
-                        <input type="text" placeholder="Twoje imię" required>
-                        <input type="email" placeholder="Twój email" required>
-                        <textarea placeholder="Wiadomość" rows="4" required></textarea>
-                        <button type="submit">Wyślij <i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2024 Norbert Trytek. Wszystkie prawa zastrzeżone.</p>
-                <div class="theme-toggle">
-                    <button id="themeToggle" onclick="toggleTheme()">
-                        <i class="fas fa-moon"></i>
-                    </button>
+                <div class="contact-terminal">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">kontakt.sh</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">norbert@admin:~$</span>
+                                <span class="command">echo "Skontaktuj się ze mną!"</span>
+                            </div>
+                            <div class="terminal-line">Skontaktuj się ze mną!</div>
+                            <div class="terminal-line">
+                                <span class="prompt">norbert@admin:~$</span>
+                                <span class="command">mail -s "Współpraca" notr@mail.com</span>
+                            </div>
+                            <div class="terminal-line">Gotowy na nowe wyzwania w IT!</div>
+                            <div class="terminal-line">
+                                <span class="prompt">norbert@admin:~$</span>
+                                <span class="cursor-blink">_</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
 
-    <div class="floating-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Norbert Trytek. Zaprojektowane z ❤️ i kodem.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
