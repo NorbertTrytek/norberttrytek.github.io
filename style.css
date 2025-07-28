@@ -304,11 +304,12 @@ body {
 .btn-maximize { background: #28ca42; }
 
 .terminal-title {
-    color: var(--text-secondary);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
-    text-align: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 
 .terminal-body {
