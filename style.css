@@ -307,6 +307,8 @@ body {
     color: var(--text-secondary);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.9rem;
+    text-align: center;
+
 }
 
 .terminal-body {
