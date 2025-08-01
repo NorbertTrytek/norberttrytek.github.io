@@ -275,17 +275,15 @@ window.addEventListener('load', () => {
 console.log(`
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
-║   🚀 Witaj w konsoli Norberta Trytka!                   ║
+║    Witaj w konsoli Norberta Trytka!                       ║
 ║                                                           ║
-║   💼 Junior IT Administrator                              ║
-║   📧 notr@mail.com                                       ║
+║    Junior IT Administrator                                ║
+║    notr@mail.com                                          ║
 ║                                                           ║
-║   🛠️  Ta strona została stworzona z:                     ║
-║   • HTML5 & CSS3                                         ║
-║   • Vanilla JavaScript                                   ║
-║   • Miłością do kodu ❤️                                  ║
+║    Ta strona została stworzona z:                         ║
+║       • HTML5 & CSS3                                      ║
+║       • JavaScript                                        ║
 ║                                                           ║
-║   Szukasz developera? Skontaktuj się ze mną!            ║
 ║                                                           ║
 ╚═══════════════════════════════════════════════════════════╝
 `);
