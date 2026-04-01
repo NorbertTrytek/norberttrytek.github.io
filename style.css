@@ -393,6 +393,8 @@ section {
     line-height: 1.6;
     color: var(--text-secondary);
     overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .about-stats {
